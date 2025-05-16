@@ -1,27 +1,38 @@
 // import logo from './logo.svg';
 import './App.css';
-// import React from 'react';
-// import Example1 from './components/Example1';
-// import Example2 from './components/Example2';
-// import Example3 from './components/Example3';
-// import Ex4 from './components/Ex4'; 
-import Ex5 from './components/Ex5';
-// import Ex6 from './components/Ex6';
-// import Ex9 from './components/Ex9';
+import FormRegister from './components/lesson4/Example2/FormRegister';
+import Age from './components/lesson4/Example3/Age';
+import Greeting from './components/lesson4/Example3/Greeting';
+import Hello from './components/lesson4/Example3/Hello';
+import LoginStatus from './components/lesson4/Example3/LoginStatus';
+import Parent from './components/lesson4/Example3/Parent';
+import PostList from './components/lesson4/Example3/PostList';
+import TheName from './components/lesson4/Example3/TheName';
 
 
 function App() {
-    return(
-      <>  
-      <Ex5 />
-        {/* <Example2 />
-        <Example3 />
-        <Ex4 />
-        <Ex5 />
-        <Ex6 />
-        <Ex9 /> */}
-      </>
-    )
+  const myStyle = {
+    color: 'red',
+    backgroundColor: 'lightgray',
+    fontSize: '20px',
+    padding: '10px',
+    borderRadius: '5px'
+  };
+  return (
+    <>
+      <h1 style={myStyle}>Bài tập Component Prop</h1>
+      <Hello />
+      <ul>
+        <li><TheName name="Kien" /></li>
+        <li><Age age="21" /></li>
+        <li><Greeting message="xin chao" /></li>
+        <li><Parent /></li>
+        <li><LoginStatus isLoggedIn={false} /></li>
+      </ul>
+      <PostList/>
+      <FormRegister />
+    </>
+  )
 }
 
 export default App;
