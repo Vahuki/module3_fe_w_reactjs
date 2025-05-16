@@ -1,9 +1,14 @@
-function PostItem(prop){
+function PostItem(prop) {
     return (
         <div>
-            <h2>{prop.posts.title}</h2>
-            <p>{prop.posts.data}</p>
-            <p>{prop.posts.excerpt}</p>
+            <ul>
+                {prop.posts.map((item, index) => (
+                    <li key={index}>
+                        <h3>{item.title}</h3>
+                        <p>{item.content}</p>
+                    </li>
+                ))}
+            </ul >
         </div>
     );
 }

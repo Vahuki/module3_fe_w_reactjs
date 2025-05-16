@@ -8,7 +8,9 @@ import LoginStatus from './components/lesson4/Example3/LoginStatus';
 import Parent from './components/lesson4/Example3/Parent';
 import PostList from './components/lesson4/Example3/PostList';
 import TheName from './components/lesson4/Example3/TheName';
-
+import SearchBar from './components/lesson4/Example3/SearchBar';
+import Alert from './components/lesson4/Example3/Alert';
+import Navbar from './components/lesson4/Example3/Navbar';
 
 function App() {
   const myStyle = {
@@ -18,8 +20,16 @@ function App() {
     padding: '10px',
     borderRadius: '5px'
   };
+  const link = ["Home", "About", "Contact"];
+  const styleNavbar = {
+    backgroundColor: 'lightblue',
+    padding: '10px',
+    display: 'flex',
+    borderRadius: '5px'
+  };
   return (
     <>
+      <Navbar link={link} style={styleNavbar}/>
       <h1 style={myStyle}>Bài tập Component Prop</h1>
       <Hello />
       <ul>
@@ -29,7 +39,12 @@ function App() {
         <li><Parent /></li>
         <li><LoginStatus isLoggedIn={false} /></li>
       </ul>
-      <PostList/>
+      <PostList />
+      <SearchBar />
+      <Alert type="success" message="Thành công!" />
+      <Alert type="warning" message="Cảnh báo!" />
+      <Alert type="error" message="Có lỗi xảy ra!" />
+
       <FormRegister />
     </>
   )
